@@ -36,4 +36,63 @@ console.log(nombre) //? PUnto y coma es opcional,
 console.log("=============FUERA DEL BLOQUE==================")
     console.log(nombre)
     console.log(apellido)
-    //!mostraría error de referencia //! console.log(rtn)
+    //!mostraría error de referencia 
+    //! console.log(rtn) por que rtn tiene nada más alcance de bloque al bloque anterior
+
+
+
+
+//?======================================================================================================
+//*truthy
+    //*true,1,"Cadena no vacía", otro valor que no represente ausencia
+//!Falsy
+    //! false, 0, null, []
+//?Nulish
+    //? undefined
+
+//undefined significa que nunca existió un valor
+
+// let test;
+
+// if(test){
+//     console.log('se cumplió');
+// }
+// else{
+//     console.log("nadita");
+// } //?devolvió nadita
+
+// let test = null;
+
+// if(test == 0){
+//     console.log('se cumplió');
+// }
+// else{
+//     console.log("nadita");
+// }// ?devolvió nadita
+
+// let test = null;
+
+// if([]==[]){ //es falso por que en estructuras de datos se comparan las referencias en memoria no los valores
+//     console.log('se cumplió');
+// }
+// else{
+//     console.log("nadita");
+// }// ?devolvió nadita
+
+// let test = "1";
+
+// if(test == 1){ //?doble igual es comparación de datos, js va a castear si se puede
+//     console.log('se cumplió');
+// }
+// else{
+//     console.log("nadita");
+// }// ?devolvió se cumplió
+
+let test = "1";
+
+if(test === 1){ //?triple igual es comparación estricta, mismo tipo y mismo valor
+    console.log('se cumplió');
+}
+else{
+    console.log("nadita");
+}// ?devolvió nadita
