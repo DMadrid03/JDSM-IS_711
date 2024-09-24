@@ -88,7 +88,7 @@ console.log("=============FUERA DEL BLOQUE==================")
 //     console.log("nadita");
 // }// ?devolvió se cumplió
 
-let test = "1";
+let test = null;
 
 if(test === 1){ //?triple igual es comparación estricta, mismo tipo y mismo valor
     console.log('se cumplió');
@@ -96,3 +96,16 @@ if(test === 1){ //?triple igual es comparación estricta, mismo tipo y mismo val
 else{
     console.log("nadita");
 }// ?devolvió nadita
+
+console.log(typeof(test))
+
+
+// ? Operador ternario y operador nullable
+let edad = null
+const test2 = edad?? 0
+    //*si es nulo se le asigna un valor de la derecha
+    
+const esMayor = edad > 18 ? 'es mayor' : 'es menor'
+console.log(esMayor)
+
+
