@@ -29,16 +29,17 @@ const calcAreaCirc = (r)=>{
 //misma función en una línea
 const calcAreaCirc2 = (r)=> Math.PI * Math.pow(r,2) ?? 0 //!Inculida la validación
 
-console.log(calcAreaCirc(2))
-console.log(calcAreaCirc("2"))
-console.log(calcAreaCirc("hola"))
+// console.log(calcAreaCirc(2))
+// console.log(calcAreaCirc("2"))
+// console.log(calcAreaCirc("hola"))
 
-console.log(saludo()) //?muestra undefined por que la funcion no devuelve nada
+// console.log(saludo()) //?muestra undefined por que la funcion no devuelve nada
 
-const miFuncion =saludo
-console.log(miFuncion())
-console.log(imprimir())
+// const miFuncion =saludo
+// console.log(miFuncion())
+// console.log(imprimir())
 
 
-console.log(eval('2+2'))
+// console.log(eval('2+2'))
 
+//CASO ESPECIAL CON PARÁMETROS, LEER DOCUMENTO 
