@@ -1,0 +1,2 @@
+Hola, soy el archivo 2 de texto
+para aprender a manejar el sistema de archivos con node js
