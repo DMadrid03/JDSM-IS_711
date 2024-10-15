@@ -24,7 +24,7 @@ function tareaAsincrona(){
 
 tareaAsincrona()
     .then((data)=>{
-        // console.log(data);
+         console.log(data);
     })
     .catch((error)=>{
         console.log(error);
@@ -62,5 +62,5 @@ function procesarEntrada(nombre, callback){
     callback();
 }*/
 
-// procesarEntrada("Daniel", despedida);
+procesarEntrada("Daniel", despedida);
 

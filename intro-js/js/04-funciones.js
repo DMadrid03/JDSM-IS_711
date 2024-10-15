@@ -11,7 +11,7 @@ const saludo2 = function(){
 }
 //no se va a poder modificar el valor de la variable, esta variable tiene la referencia de la función
 
-
+saludo()
 //otra forma de definir las funciones: callback o función flecha
 const imprimir = (nombre = "")=>{
     console.log('Hola desde una función flecha, ' + nombre)
