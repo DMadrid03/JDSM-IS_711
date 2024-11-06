@@ -9,9 +9,11 @@ export const middlewareCors = cors({
         ]
         if (accesosPermitidos.includes(origin)){
             callback(null, true)
+            return
         }
         if (!origin){ //?necesario para que responda a peticiones desde el servidor (como desde postman)
             callback(null, true)
+            return
         }
         callback(new Error('No permitido'))        
     },
