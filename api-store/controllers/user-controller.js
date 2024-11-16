@@ -108,7 +108,8 @@ export class UserController {
 
             const { username, password_hash, email, full_name, role, must_change_password, status } = data
 
-            const password = bcrypt.hashSync(password_hash, 10)
+            //crea el hash de la contraseña
+            const password = bcrypt.ashSync(password_hash, 10)
 
             connection.query(query, [username, password, email, full_name, role, must_change_password, status], (error, results) => {
                 if (error) {

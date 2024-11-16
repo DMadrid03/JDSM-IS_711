@@ -2,6 +2,7 @@
 import express, { json } from 'express'
 import userRouter from './router/user.js';
 import { middlewareCors } from './middlewares/cors.js';
+import authRouter from './router/auth.js';
 
 //?equialente al create server de node
 const app = express(); //instancia de express 
@@ -12,6 +13,7 @@ const PORT = process.env.PORT || 3000;
 //?Rutas
     //*para utilizar las rutas del archivo router/user.js
 app.use('/users', userRouter) //!como si fuese un middleware
+app.use('/login',authRouter)
 
 //*cors
 app.use(middlewareCors)
