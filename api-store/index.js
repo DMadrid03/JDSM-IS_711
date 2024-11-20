@@ -14,6 +14,7 @@ const PORT = process.env.PORT || 3000;
     //*para utilizar las rutas del archivo router/user.js
 app.use('/users', userRouter) //!como si fuese un middleware
 app.use('/login',authRouter)
+app.use('/auth',authRouter)
 
 //*cors
 app.use(middlewareCors)

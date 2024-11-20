@@ -109,7 +109,7 @@ export class UserController {
             const { username, password_hash, email, full_name, role, must_change_password, status } = data
 
             //crea el hash de la contraseña
-            const password = bcrypt.ashSync(password_hash, 10)
+            const password = bcrypt.hashSync(password_hash, 10)
 
             connection.query(query, [username, password, email, full_name, role, must_change_password, status], (error, results) => {
                 if (error) {
@@ -126,7 +126,7 @@ export class UserController {
         } catch (error) {
             res.status(400).json({
                 error: true,
-                message: "Ocurrió un error al obtener los dato"
+                message: "Ocurrió un error al obtener los datos, catch" + error
             })
         }
     }
