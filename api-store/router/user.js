@@ -1,15 +1,21 @@
-import {Router, json} from  'express'
-import { UserController } from '../controllers/user-controller.js';
+import { Router } from 'express'
+import { UserController } from '../controllers/user-controller.js'
+import authMiddleware from '../middlewares/authMiddleware.js'
+import isAdmin from '../middlewares/isAdmin.js'
+
 const userRouter = Router()
 
+// se aplica el middleware de autenticación a todas las rutas de este router
+userRouter.use(authMiddleware)
 
-userRouter.use(json())
+// si quiero que una ruta tenga un middleware en específico,
+//  se lo paso como segundo argumento
+// userRouter.get('/', /*authMiddleware,*/ UserController.getAllUsers)
+userRouter.get('/', isAdmin, UserController.getAllUsers)
+userRouter.get('/:user_id', UserController.getUserById)
+userRouter.post('/', UserController.createUser)
 
-userRouter.get('/', UserController.getAllUsers)
-userRouter.get('/:id',UserController.getUserById)
-userRouter.post('/',UserController.createUser)
 userRouter.patch('/:id', UserController.updateUser)
 userRouter.delete('/:id',UserController.deleteUser)
-
 
 export default userRouter

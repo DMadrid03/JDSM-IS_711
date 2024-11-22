@@ -1,15 +1,10 @@
-import {Router, json} from  'express'
-import {AuthController} from '../controllers/auth-controller.js'
+import { Router } from 'express'
+import { AuthController } from '../controllers/auth-controller.js'
 
-const authRouter = Router();
 
-//por qu
+const authRouter = Router()
 
-authRouter.use(json())
-authRouter.post('/', (req, res) => {
-    console.log("petición enrutada por authRouter")
-    console.log(req.body)
-    AuthController.authuser(req, res)
-}) 
+// POST: Crear un recurso
+authRouter.post('/', AuthController.authuser)
 
-export default authRouter
+export default authRouter   
